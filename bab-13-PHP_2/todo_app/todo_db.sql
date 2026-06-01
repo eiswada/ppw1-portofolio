@@ -1,15 +1,9 @@
--- ============================================
--- DATABASE: todo_db
--- Import file ini ke phpMyAdmin
--- ============================================
-
 CREATE DATABASE IF NOT EXISTS `todo_db` 
   DEFAULT CHARACTER SET utf8mb4 
   COLLATE utf8mb4_unicode_ci;
 
 USE `todo_db`;
 
--- Tabel todos
 CREATE TABLE IF NOT EXISTS `todos` (
   `id`          INT(11)      NOT NULL AUTO_INCREMENT,
   `task`        VARCHAR(255) NOT NULL,
@@ -21,7 +15,6 @@ CREATE TABLE IF NOT EXISTS `todos` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Data contoh
 INSERT INTO `todos` (`task`, `status`, `due_date`, `priority`) VALUES
 ('Buy groceries for next week',  'completed', '2024-06-28', 'medium'),
 ('Renew car insurance',          'pending',   '2024-06-28', 'high'),
