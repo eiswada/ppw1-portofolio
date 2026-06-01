@@ -11,7 +11,8 @@ Program Studi TRPL — Semester 2  ---
 
 ## 🚀 Demo Live
 
-🔗 [Lihat Demo](https://your-demo-link.com) *(coming soon)*
+🔗 Project CRUD To Do App: https://eiswada.42web.io/todo_app
+🔗 Project CRUD Data Mahasiswa: https://eiswada.42web.io/praktikum_crud
 
 ---
 
@@ -31,17 +32,13 @@ Program Studi TRPL — Semester 2  ---
 | 11  | JavaScript 2           | bab-11-javascript-2/          |
 | 12  | PHP                    | bab-12-php/                   |
 | 13  | PHP 2                  | bab-13-php-2/                 |
-
+| 14  | CRUD                   | bab-14-crud/                  |
 ---
 
 ## 📸 Screenshot
 
-> Screenshot akan ditambahkan segera.
-
-<!-- Contoh cara menambahkan screenshot:
-![Bab 1](screenshots/bab1.png)
-![Bab 2](screenshots/bab2.png)
--->
+![Preview CRUD](bab-13-php_2/todo_app/todo_app.png) 
+![Preview CRUD](bab-14-crud/praktikum_crud.png) 
 
 ---
 
@@ -51,4 +48,4 @@ HTML · CSS · JavaScript · PHP · MySQL · Bootstrap
 
 ---
 
-*© 2025 Putrie Araya Iswada — Universitas Gadjah Mada*
+*© 2025 Putrie Araya Iswada*
