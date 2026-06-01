@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>eiswada — Raya Iswada Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Edu+AU+VIC+WA+NT+Dots:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+  <div class="container-fluid px-0">
+    <a href="#home" class="nav-logo"><span>e</span>iswada</a>
+
+    <button class="navbar-toggler ms-auto" type="button"
+      data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+      aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#project">Project</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="scroll-line" id="scrollLine">
+  <div class="scroll-line__track" id="scrollTrack"></div>
+  <div class="scroll-line__dot" id="scrollDot"></div>
+</div>
+
+<main>
+
+  <section class="hero-card" id="home">
+    <div class="row align-items-center g-5">
+
+      <div class="col-12 col-lg-5 hero-text-col">
+        <div class="hero-label">Portfolio '26</div>
+        <h1 class="hero-name">
+          Raya
+          <span class="highlight">Iswada</span>
+        </h1>
+        <p class="hero-subtitle">Technical Artist · Real-Time Specialist</p>
+        <p class="hero-desc">
+          I live at the crossroads of art and engineering — building shader systems,
+          real-time VFX pipelines, and procedural tools that let artists push further
+          without breaking production.
+        </p>
+        <div class="hero-btns">
+          <button class="btn-outline">VIEW WORK →</button>
+          <button class="btn-fill">GET IN TOUCH</button>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-7 hero-photo-col">
+        <img
+          src="image.png"
+          class="hero-photo"
+          alt="Greek Hero"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+        >
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section class="about-card" id="about">
+    <div class="row align-items-center">
+      <div class="col-lg-3 col-12">
+        <img src="PictPortoRaya.jpg" class="about-img" alt="Raya Iswada">
+      </div>
+      <div class="col-lg-9 col-12">
+        <div class="about-label">About Me</div>
+        <h2 class="about-title">Behind the<br><span class="highlight">pixels</span></h2>
+        <p class="about-quote">"Where visual ideas are born from curiosity and an obsession with getting the details right."</p>
+        <p class="about-desc">
+          Hey, I'm Raya — a Technical Artist based in Indonesia. I specialize in real-time
+          rendering, shader authoring in HLSL/GLSL, and building VFX pipelines that bridge
+          the gap between the art team and the engine. I'm most at home inside Unreal Engine
+          and Unity, scripting tools in Python or Blueprints so artists can iterate fast
+          without waiting on engineering. I care deeply about craft: the kind of care that
+          makes a particle effect feel alive or a material respond exactly the way light should.
+        </p>
+        <div class="skills-label">Toolkit</div>
+        <div class="skills-tags">
+          <span class="skill-tag">Unreal Engine 5</span>
+          <span class="skill-tag">HLSL / GLSL</span>
+          <span class="skill-tag">Houdini</span>
+          <span class="skill-tag">Niagara VFX</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Substance Designer</span>
+          <span class="skill-tag">Unity HDRP</span>
+          <span class="skill-tag">Blender</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="works-section" id="project">
+    <div class="works-label">About My Works</div>
+    <div class="works-inner">
+      <div>
+        <span class="works-title"><span class="accent">MY</span><br>WORKS</span>
+        <p class="works-subtitle">
+          I design real-time visual systems and immersive shader experiences —
+          pushing the limits of what game engines can render while keeping
+          pipelines clean and artist-friendly.
+        </p>
+      </div>
+      <div class="works-right-simple">
+        <div class="works-chip"><span class="chip-dot"></span> Shader Development</div>
+        <div class="works-chip"><span class="chip-dot orange"></span> VFX Pipelines</div>
+        <div class="works-chip"><span class="chip-dot"></span> Real-time Rendering</div>
+        <div class="works-stats-row">
+          <div class="works-stat">
+            <div class="works-stat-number">20+</div>
+            <div class="works-stat-label">Projects Completed</div>
+          </div>
+          <div class="works-stat">
+            <div class="works-stat-number">3+</div>
+            <div class="works-stat-label">Years of Experience</div>
+          </div>
+          <div class="works-stat">
+            <div class="works-stat-number">15+</div>
+            <div class="works-stat-label">Happy Clients</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section class="projects-section">
+    <div class="projects-header">
+      <span class="projects-header-label">Selected Projects</span>
+      <a href="#" class="view-all">VIEW ALL →</a>
+    </div>
+    <div class="projects-grid-wrapper">
+      <div class="row g-3">
+
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="project-card">
+            <img src="project-emberflow.jpg" class="project-preview-img" alt="Emberflow Preview"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="project-info">
+              <div class="project-name">Emberflow</div>
+              <p class="project-desc">A real-time fire & fluid simulation system built in Unreal Engine 5 using Niagara VFX — driven by custom HLSL shaders for heat distortion and volumetric glow.</p>
+              <div class="project-tags">
+                <span class="project-tag">#UE5</span>
+                <span class="project-tag">#Niagara</span>
+                <span class="project-tag">#HLSL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="project-card">
+            <img src="project-matforge.jpg" class="project-preview-img" alt="MatForge Preview"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="project-info">
+              <div class="project-name">MatForge</div>
+              <p class="project-desc">A procedural material authoring toolkit built in Substance Designer and Python — auto-generates PBR texture sets from height data with one-click UE5 export.</p>
+              <div class="project-tags">
+                <span class="project-tag">#Substance</span>
+                <span class="project-tag">#Python</span>
+                <span class="project-tag">#PBR</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="project-card">
+            <img src="project-voidscape.jpg" class="project-preview-img" alt="VoidScape Preview"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="project-info">
+              <div class="project-name">VoidScape</div>
+              <p class="project-desc">An atmospheric environment built for a cinematic short — deep-space skybox, GPU particle nebulae, and a custom lens-flare shader baked entirely in real-time.</p>
+              <div class="project-tags">
+                <span class="project-tag">#UE5</span>
+                <span class="project-tag">#Environment</span>
+                <span class="project-tag">#Cinematic</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer id="contact">
+  <div class="container-fluid px-0">
+
+    <div class="row g-0 footer-top-row">
+
+      <div class="col-lg-6 col-12 footer-left">
+        <div class="footer-logo"><span>e</span>iswada</div>
+        <p class="footer-tagline">Technical Artist specializing in real-time rendering & VFX pipelines — based in Indonesia.</p>
+      </div>
+
+      <div class="col-lg-6 col-12 footer-right">
+        <div class="footer-contact-block">
+          <div class="footer-get-in-touch">Get In Touch</div>
+          <p class="footer-contact-msg">Have a project or collaboration<br>in mind? Let's build something.</p>
+          <a href="mailto:raya@iswada.dev" class="footer-email">raya@iswada.dev</a>
+        </div>
+        <div class="footer-socials">
+          <a href="#" class="footer-social-pill">
+            <span class="footer-social-platform">LinkedIn</span>
+            <span class="footer-social-handle">@eiswada</span>
+          </a>
+          <a href="#" class="footer-social-pill">
+            <span class="footer-social-platform">IG</span>
+            <span class="footer-social-handle">@eiswada</span>
+          </a>
+          <a href="#" class="footer-social-pill">
+            <span class="footer-social-platform">ArtStation</span>
+            <span class="footer-social-handle">@eiswada</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row footer-bottom">
+      <div class="col-12">
+        <p class="footer-copyright">© 2026 Raya Iswada — Portfolio '26</p>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  const scrollDot   = document.getElementById('scrollDot');
+  const scrollTrack = document.getElementById('scrollTrack');
+  const scrollLine  = document.getElementById('scrollLine');
+  const nav         = document.getElementById('mainNav');
+  const footerEl    = document.querySelector('footer');
+
+  scrollLine.style.position = 'fixed';
+
+  const GAP = 20;
+  let rafScheduled = false;
+
+  function tick() {
+    rafScheduled = false;
+    const navH       = nav.offsetHeight;
+    const footerRect = footerEl.getBoundingClientRect();
+    const lineTop    = navH + GAP;
+    const lineBottom = Math.min(footerRect.top - GAP, window.innerHeight);
+    const lineHeight = Math.max(lineBottom - lineTop, 0);
+
+    scrollLine.style.top    = lineTop + 'px';
+    scrollLine.style.height = lineHeight + 'px';
+
+    const scrollTop = window.scrollY;
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    const p = maxScroll > 0 ? Math.min(Math.max(scrollTop / maxScroll, 0), 1) : 0;
+
+    scrollTrack.style.height = (p * 100) + '%';
+    scrollDot.style.top = Math.max(0, (p * lineHeight) - 5) + 'px';
+
+    nav.classList.toggle('scrolled', scrollTop > 10);
+  }
+
+  function scheduleUpdate() {
+    if (!rafScheduled) { rafScheduled = true; requestAnimationFrame(tick); }
+  }
+
+  window.addEventListener('scroll', scheduleUpdate, { passive: true });
+  window.addEventListener('resize', scheduleUpdate);
+  window.addEventListener('load',   scheduleUpdate);
+  document.fonts.ready.then(scheduleUpdate);
+  scheduleUpdate();
+</script>
+
+</body>
+</html>
