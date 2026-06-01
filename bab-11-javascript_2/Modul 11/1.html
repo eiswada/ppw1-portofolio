@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Tiga Cara Memanggil JavaScript</title>
+
+  <script src="1.js"></script>
+
+</head>
+<body>
+
+  <h1>Cara Memanggil JS</h1>
+
+  <!-- 1. JavaScript INLINE -->
+  <h2>1. Inline</h2>
+  <button onclick="alert('Halo ini JS Inline!')">Klik</button>
+
+  <!-- 2. JavaScript EMBED (Internal) -->
+   <h2>2. Embed (Internal)</h2>
+  <button onclick="tampilkanPesan()">Klik</button>
+
+  <script>
+    function tampilkanPesan() {
+      alert("Halo ini JS Embed / Internal!");
+    }
+  </script>
+
+   <!-- 3. JavaScript EKSTERNAL -->
+  <h2>3. Eksternal</h2>
+  <div id="kotak" style="padding:10px; background:rgb(193, 208, 155); display:inline-block;">
+    Kotak ini akan berubah
+  </div>
+  <br><br>
+  <button onclick="ubahWarna()">Klik</button>
+
+</body>
+</html>

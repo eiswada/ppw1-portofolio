@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Cara Output JavaScript</title>
+</head>
+<body>
+
+  <h1>Cara Output JavaScript</h1>
+
+  <!-- 1. console.log() -->
+  <h2>1. console.log()</h2>
+  <p>Output muncul di Console browser.</p>
+  <button onclick="coba_console()">Jalankan</button>
+
+  <script>
+    function coba_console() {
+      console.log("Halo ini console.log()!");
+    }
+  </script>
+
+  <!-- 2. alert() -->
+  <h2>2. alert()</h2>
+  <p>Output muncul sebagai popup.</p>
+  <button onclick="alert('Halo dari alert()!')">Jalankan</button>
+
+  <!-- 3. document.write() -->
+  <h2>3. document.write()</h2>
+  <p>Output ditulis langsung ke halaman HTML.</p>
+  <button onclick="document.write('<p>Halo ini document.write()! </p>')">Jalankan</button>
+
+  <!-- 4. innerHTML -->
+    <h2>4. innerHTML</h2>
+  <p>Output disisipkan ke dalam elemen HTML di bawah ini:</p>
+  <div id="kotak" style="border: 1px solid rgb(81, 49, 240); padding: 10px; min-height: 30px;">
+    -none-
+  </div>
+  <br>
+  <button onclick="isiKotak()">Jalankan</button>
+
+  <script>
+    function isiKotak() {
+      document.getElementById("kotak").innerHTML = "<b>Halo ini innerHTML!</b>";
+    }
+  </script>
+
+</body>
+</html>
