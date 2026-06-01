@@ -1,5 +1,4 @@
 <?php
-// actions.php  –  Handles semua CRUD via POST/GET
 require_once 'config/db.php';
 
 $action = $_REQUEST['action'] ?? '';
