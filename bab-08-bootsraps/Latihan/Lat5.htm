@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Latihan 4 - Komponen Bootstrap</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ========================
+       4a. Navbar
+       ======================== -->
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <div class="container">
+      <!-- Brand/Logo -->
+      <a class="navbar-brand fw-bold" href="#">WebKu</a>
+
+      <!-- Tombol hamburger untuk layar kecil -->
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menu navigasi -->
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Tentang</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container my-4">
+
+    <!-- ========================
+         4b. Button
+         ======================== -->
+    <h5>Button</h5>
+
+    <!-- Varian utama -->
+    <button class="btn btn-primary">Primary</button>
+    <button class="btn btn-secondary">Secondary</button>
+    <button class="btn btn-success">Success</button>
+    <button class="btn btn-danger">Danger</button>
+    <button class="btn btn-warning">Warning</button>
+
+    <!-- Varian outline (transparan) -->
+    <button class="btn btn-outline-primary">Outline Primary</button>
+
+    <!-- Ukuran tombol -->
+    <button class="btn btn-primary btn-sm">Kecil</button>
+    <button class="btn btn-primary btn-lg">Besar</button>
+
+    <!-- Tombol full width -->
+    <button class="btn btn-primary w-100 mt-2">Tombol Penuh</button>
+
+    <!-- ========================
+         4c. Card
+         ======================== -->
+    <h5 class="mt-4">Card</h5>
+
+    <div class="card" style="max-width: 350px;">
+      <!-- Gambar header card (opsional) -->
+      <img src="gambar.jpg" class="card-img-top" alt="Foto">
+      <div class="card-body">
+        <h5 class="card-title">Judul Card</h5>
+        <p class="card-text">Deskripsi singkat konten card ini.</p>
+        <a href="#" class="btn btn-primary">Selengkapnya</a>
+      </div>
+      <!-- Footer card (opsional) -->
+      <div class="card-footer text-muted">
+        <small>Diposting 2 hari lalu</small>
+      </div>
+    </div>
+
+    <!-- Layout 3 card dalam row responsif -->
+    <div class="row row-cols-1 row-cols-md-3 g-4 mt-2">
+      <div class="col"><div class="card h-100 p-3">Card 1</div></div>
+      <div class="col"><div class="card h-100 p-3">Card 2</div></div>
+      <div class="col"><div class="card h-100 p-3">Card 3</div></div>
+    </div>
+
+    <!-- ========================
+         4d. Badge & Alert
+         ======================== -->
+    <h5 class="mt-4">Badge & Alert</h5>
+
+    <!-- Badge -->
+    <span class="badge bg-primary">Baru</span>
+    <span class="badge bg-danger">5</span>
+
+    <!-- Contoh notifikasi -->
+    <h4 class="mt-2">Pesan Masuk <span class="badge bg-secondary">12</span></h4>
+
+    <!-- Alert -->
+    <div class="alert alert-success mt-2" role="alert">
+      <strong>Berhasil!</strong> Data telah disimpan.
+    </div>
+
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      Terjadi kesalahan.
+      <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+
+    <!-- ========================
+         4e. Modal
+         ======================== -->
+    <h5 class="mt-4">Modal</h5>
+
+    <!-- Tombol pemicu modal -->
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalKonfirmasi">
+      Hapus Data
+    </button>
+
+  </div>
+
+  <!-- Struktur modal (letakkan sebelum </body>) -->
+  <div class="modal fade" id="modalKonfirmasi" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title">Konfirmasi Hapus</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body">
+          Apakah Anda yakin ingin menghapus data ini?
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="button" class="btn btn-danger">Hapus</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
