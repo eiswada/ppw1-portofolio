@@ -1,0 +1,22 @@
+# File konfigurasi database
+config/koneksi.php
+config/database.php
+config/db.php
+.env
+
+# File upload dari pengguna
+uploads/
+storage/
+
+# File sistem operasi
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Folder IDE / editor
+.vscode/
+.idea/
+
+# Log dan cache
+*.log
+cache/
