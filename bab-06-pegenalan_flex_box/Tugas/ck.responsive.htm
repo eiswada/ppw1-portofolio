@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C.Cake — Cheesecake Recipes</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Jost:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="nav" id="nav">
+    <div class="nav__bar"></div>
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">C.Cake</a>
+
+      
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav__list" id="navList">
+        <li class="nav__item nav__item--drop">
+          <a href="#" class="nav__link">
+            Recipes
+            <i class="fa-solid fa-chevron-down" style="font-size:7px; margin-left:4px;"></i>
+          </a>
+          <div class="nav__sub">
+            <a href="#" class="nav__sub-link"><i class="fa-solid fa-circle"></i> Classic Baked</a>
+            <a href="#" class="nav__sub-link"><i class="fa-solid fa-circle"></i> No-Bake</a>
+            <a href="#" class="nav__sub-link"><i class="fa-solid fa-circle"></i> Mini Cups</a>
+            <a href="#" class="nav__sub-link"><i class="fa-solid fa-circle"></i> Seasonal</a>
+          </div>
+        </li>
+        <li class="nav__item"><a href="#tips" class="nav__link">Tips</a></li>
+        <li class="nav__item"><a href="#about" class="nav__link">Ingredients</a></li>
+        <li class="nav__item"><a href="#" class="nav__link nav__link--cta">Get Guide</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <span class="hero__eyebrow">Handcrafted Recipes — Est. 2025</span>
+      <h1 class="hero__title">The Art of a<br /><em>Perfect Cheesecake</em></h1>
+      <p class="hero__desc">From silky New York slices to light no-bake cups — every recipe here is tested,
+        beginner-friendly, and absolutely worth it.</p>
+      <div class="hero__actions">
+        <a href="#tips" class="hero__btn"><i class="fa-solid fa-book-open"></i> Browse Recipes</a>
+        <a href="#tips" class="hero__btn--ghost">Read the basics <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+    <div class="hero__scroll">
+      <div class="hero__scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="review">
+    <div class="review__inner">
+      <span class="review__eyebrow"><i class="fa-solid fa-quote-left"></i> &nbsp;What readers say</span>
+      <h2 class="review__title">They tried it.<br />They loved it.</h2>
+      <div class="review__grid">
+        <div class="review__card">
+          <div class="review__stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review__text">"I followed the New York style recipe step by step — came out perfect on the first
+            try. No cracks, super creamy!"</p>
+          <span class="review__author">Ayu R. — Jakarta</span>
+        </div>
+        <div class="review__card">
+          <div class="review__stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+              class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+          </div>
+          <p class="review__text">"The no-bake lemon version is my go-to for gatherings. Always get compliments. So easy
+            and so good."</p>
+          <span class="review__author">Budi S. — Bandung</span>
+        </div>
+        <div class="review__card">
+          <div class="review__stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review__text">"Never thought I could make cheesecake at home. The tips section saved me from so many
+            mistakes!"</p>
+          <span class="review__author">Rina M. — Surabaya</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about__image-col">
+      <img
+        src="https://recipesblob.oetker.co.uk/assets/572e7ae2e23b467da95084194c9e116d/1272x764/blueberry-cheesecake-in-a-glass.webp"
+        alt="Blueberry Cheesecake" />
+    </div>
+    <div class="about__content-col">
+      <div class="about__content">
+        <span class="about__label"><i class="fa-solid fa-cake-candles"></i> About This Site</span>
+        <h2 class="about__title">Made for the<br /><em class="about__title--italic">Home Baker</em></h2>
+        <p class="about__desc">This site started from one failed cheesecake and a lot of determination. Every recipe
+          here has been tested multiple times in a real home kitchen — no professional equipment, no shortcuts hidden.
+        </p>
+        <div class="about__stats">
+          <div><span class="about__stat-num">12+</span><span class="about__stat-label">Recipes</span></div>
+          <div><span class="about__stat-num">100%</span><span class="about__stat-label">Home Tested</span></div>
+          <div><span class="about__stat-num">3k+</span><span class="about__stat-label">Happy Bakers</span></div>
+        </div>
+        <ul class="about__list">
+          <li class="about__list-item"><i class="fa-solid fa-check"></i> All recipes tested at home</li>
+          <li class="about__list-item"><i class="fa-solid fa-check"></i> Beginner-friendly instructions</li>
+          <li class="about__list-item"><i class="fa-solid fa-check"></i> Honest tips, no shortcuts hidden</li>
+          <li class="about__list-item"><i class="fa-solid fa-check"></i> Updated regularly with new recipes</li>
+        </ul>
+        <a href="#" class="about__btn"><i class="fa-solid fa-arrow-right"></i> Our Story</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENT: TOC + MAIN + SIDEBAR -->
+  <section class="content" id="tips">
+    <div class="content__inner">
+      <aside class="toc">
+        <h4 class="toc__title">Contents</h4>
+        <ul class="toc__list">
+          <li class="toc__item"><a href="#toc-cream-cheese" class="toc__link">The right cream cheese</a></li>
+          <li class="toc__item"><a href="#toc-crust" class="toc__link">Crust basics</a></li>
+          <li class="toc__item"><a href="#toc-baked" class="toc__link">Baked vs no-bake</a></li>
+          <li class="toc__item"><a href="#toc-cracks" class="toc__link">Avoiding cracks</a></li>
+          <li class="toc__item"><a href="#toc-flavor" class="toc__link">Flavor ideas</a></li>
+        </ul>
+      </aside>
+      <article class="main">
+        <h2 class="main__title" id="toc-cream-cheese">Starting with Cream Cheese</h2>
+        <p class="main__text">Always use full-fat cream cheese and bring it to room temperature before mixing. Cold
+          cream cheese creates lumps that are hard to smooth out — and lumpy batter means uneven texture in the final
+          slice.</p>
+        <p class="main__text">Mix on low speed and stop as soon as everything combines. Overmixing adds air, which leads
+          to cracks during baking. Less is more when it comes to cheesecake batter.</p>
+        <div class="main__quote">
+          <p>"The difference between a good cheesecake and a great one is usually patience."</p>
+        </div>
+        <h2 class="main__title" id="toc-crust">The Graham Cracker Crust</h2>
+        <p class="main__text">Crush the crackers finely, mix with melted butter and a pinch of sugar, then press firmly
+          into the pan. Pre-bake 8–10 minutes for extra crunch before adding your filling.</p>
+        <h2 class="main__title" id="toc-baked">Baked vs No-Bake</h2>
+        <p class="main__text">Baked cheesecakes are denser and richer — perfect for classic slices. No-bake versions
+          set with cream and gelatin, giving a lighter, mousse-like texture. Both are valid; it depends on your occasion.</p>
+        <h2 class="main__title" id="toc-cracks">Avoiding Cracks</h2>
+        <p class="main__text">The two main culprits are overmixing and sudden temperature changes. Use a water bath,
+          don't open the oven door early, and let the cheesecake cool gradually inside the oven with the door slightly ajar.</p>
+        <h2 class="main__title" id="toc-flavor">Flavor Ideas</h2>
+        <p class="main__text">Classic vanilla is always a winner, but don't stop there. Lemon zest, matcha, salted caramel,
+          or a swirl of berry compote can elevate a basic recipe into something memorable.</p>
+      </article>
+      <aside class="sidebar">
+        <div class="sidebar__card">
+          <h4 class="sidebar__card-title"><i class="fa-solid fa-lightbulb"></i> Quick Tips</h4>
+          <div class="sidebar__item"><span class="sidebar__dot"></span>Room temp ingredients only</div>
+          <div class="sidebar__item"><span class="sidebar__dot"></span>Don't overmix after eggs</div>
+          <div class="sidebar__item"><span class="sidebar__dot"></span>Water bath = no cracks</div>
+          <div class="sidebar__item"><span class="sidebar__dot"></span>Chill overnight if possible</div>
+        </div>
+        <div class="sidebar__card">
+          <h4 class="sidebar__card-title"><i class="fa-solid fa-basket-shopping"></i> You'll Need</h4>
+          <div class="sidebar__item"><span class="sidebar__dot"></span>Full-fat cream cheese</div>
+          <div class="sidebar__item"><span class="sidebar__dot"></span>Heavy cream or sour cream</div>
+          <div class="sidebar__item"><span class="sidebar__dot"></span>Graham crackers</div>
+          <div class="sidebar__item"><span class="sidebar__dot"></span>Eggs + vanilla</div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        C.Cake
+        <span>Simple, tested cheesecake recipes for every home baker.</span>
+      </div>
+      <nav class="footer__nav">
+        <a href="#" class="footer__link">Recipes</a>
+        <a href="#tips" class="footer__link">Tips</a>
+        <a href="#about" class="footer__link">Ingredients</a>
+        <a href="#" class="footer__link">Our Story</a>
+        <a href="#" class="footer__link">Contact</a>
+      </nav>
+    </div>
+    <div class="footer__bar">
+      <span>© 2025 C.Cake — Made with love</span>
+      <span>All recipes tested at home.</span>
+    </div>
+  </footer>
+
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const navList = document.getElementById('navList');
+    toggle.addEventListener('click', () => {
+      navList.classList.toggle('is-open');
+    });
+  </script>
+</body>
+
+</html>

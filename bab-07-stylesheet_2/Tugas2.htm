@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Landing Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet"/>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Helvetica Neue',sans-serif;background:#fff;color:#111;display:flex;flex-direction:column;min-height:100vh}
+    main{flex:1;display:flex;flex-direction:column;justify-content:space-between}
+
+    /* TUGAS 1 — NAVBAR */
+    nav{display:flex;justify-content:space-between;align-items:center;padding:16px 40px;border-bottom:1px solid #e8e8e8}
+    .logo{font-size:14px;font-weight:700;color:#111}
+    nav ul{display:flex;gap:28px;list-style:none}
+    nav ul a{color:#111;text-decoration:none;font-size:13px;padding:5px 12px;border:1px solid transparent}
+    nav ul a:hover{border-color:#111;background:#f5f5f5}
+
+    /* TUGAS 2 — HERO */
+    .hero{display:flex;align-items:center;justify-content:space-between;padding:40px;gap:24px}
+    .hero-text{flex:1}
+    .hero-text h1{font-family:'Playfair Display',serif;font-size:34px;font-weight:800;margin-bottom:12px;line-height:1.3;color:#111}
+    .hero-text p{font-size:13px;color:#888;margin-bottom:20px;line-height:1.7}
+    .hero-text a{padding:10px 22px;background:#111;color:#fff;font-size:12px;font-weight:600;text-decoration:none;letter-spacing:0.3px}
+    .hero-text a:hover{background:#333}
+    .hero-img{width:50%;height:320px;object-fit:cover;flex-shrink:0}
+
+    /* TUGAS 3 — CARDS */
+    .cards{display:flex;flex-wrap:wrap;gap:1px;background:#e8e8e8;border-top:1px solid #e8e8e8;border-bottom:1px solid #e8e8e8}
+    .card{background:#fff;padding:28px 24px;flex:1;min-width:180px}
+    .card h3{font-size:11px;font-weight:700;color:#111;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
+    .card p{font-size:12px;color:#999;line-height:1.7}
+
+    /* TUGAS 4 — FOOTER */
+    footer{display:flex;gap:40px;padding:32px 40px;background:#111;color:#888;font-size:12px;border-top:3px solid #000}
+    footer div{flex:1}
+    footer h4{color:#fff;font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;margin-bottom:10px}
+    footer p{line-height:2}
+  </style>
+</head>
+<body>
+
+  <nav>
+    <span class="logo">◆ Studio</span>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Simple design<br>for modern life.</h1>
+      <p>Clean, purposeful, and built<br>for people who care about details.</p>
+      <a href="#">Read More →</a>
+    </div>
+    <img class="hero-img" src="https://imgs.search.brave.com/0LnkGNU1A5-bt03-Dmurq6wXs44uRG-gTCeuomH-1ws/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTIy/NTUxNzY1MC9waG90/by9zaW5nbGUtYmln/LW9hay10cmVlLWlu/LW1lYWRvdy5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9MkRP/V3NxTVcxaERPbW43/WGxGMDlJQXVPVG9x/MjhFWHBzTmdaOHd6/aFVSVT0" alt="Hero"" alt="Hero"/>
+  </section>
+
+  <section class="cards">
+    <div class="card">
+      <h3>Healthy</h3>
+      <p>Lorem ipsum dolor sit amet consectetuer adipiscing elit.</p>
+    </div>
+    <div class="card">
+      <h3>Fresh</h3>
+      <p>Aenean commodo ligula eget dolor aenean massa.</p>
+    </div>
+    <div class="card">
+      <h3>Natural</h3>
+      <p>Cum sociis natoque penatibus et magnis dis parturient.</p>
+    </div>
+  </section>
+  </main>
+
+  <footer>
+    <div><h4>Studio.</h4><p>Simple design for<br>modern problems.</p></div>
+    <div><h4>Links</h4><p>Home<br>About<br>FAQ</p></div>
+    <div><h4>Contact</h4><p>hello@studio.com<br>Jakarta, Indonesia</p></div>
+  </footer>
+
+</body>
+</html>

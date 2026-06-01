@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Navbar Responsif</title>
+    <style>
+        nav ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            padding: 0;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+        }
+
+        nav { border-bottom: 1px solid #ccc; padding: 10px; }
+        li { background-color: #f0f0f0; padding: 5px 10px; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li>Beranda</li>
+            <li>Tentang</li>
+            <li>Kontak</li>
+        </ul>
+    </nav>
+
+</body>
+</html>

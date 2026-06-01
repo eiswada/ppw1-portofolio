@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile Card</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background: #f0f0f0;
+      min-height: 200vh;
+    }
+
+    /* TUGAS 3 — STICKY NAVBAR */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #111;
+      color: #fff;
+      padding: 14px 24px;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .page {
+      display: flex;
+      justify-content: center;
+      padding: 60px 20px;
+    }
+
+    /* TUGAS 1 — KARTU PROFIL (position: relative, 260x auto) */
+    .card {
+      position: relative;
+      width: 260px;
+      background: #fff;
+      border: 1px solid #e8e8e8;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    }
+
+    /* foto cover atas */
+    .card-cover {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+    }
+
+    /* TUGAS 2 — BADGE STATUS (position: absolute) */
+    .badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 10px;
+      color: #16a34a;
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 20px;
+      padding: 3px 8px;
+      font-weight: 600;
+      z-index: 10;
+    }
+
+    .card-body {
+      padding: 12px 14px 14px;
+    }
+
+    .name-row {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-bottom: 3px;
+    }
+
+    .name {
+      font-size: 15px;
+      font-weight: 700;
+      color: #111;
+    }
+
+    .verified {
+      width: 14px;
+      height: 14px;
+      background: #1d9e75;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .verified svg {
+      display: block;
+    }
+
+    .bio {
+      font-size: 11px;
+      color: #888;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    .stats {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 11px;
+    }
+
+    .stat {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 12px;
+      color: #666;
+    }
+
+    .stat svg {
+      opacity: 0.6;
+    }
+
+    .stat-location {
+      margin-left: auto;
+      font-size: 11px;
+      color: #aaa;
+    }
+
+    .actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .btn-follow {
+      flex: 1;
+      padding: 7px 0;
+      background: #111;
+      color: #fff;
+      border: none;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      letter-spacing: 0.2px;
+    }
+
+    .btn-msg {
+      padding: 7px 14px;
+      background: transparent;
+      color: #111;
+      border: 1px solid #ddd;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    /* TUGAS 4 — BACK TO TOP (position: fixed) */
+    .back-to-top {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 200;
+      width: 44px;
+      height: 44px;
+      background: #111;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TUGAS 3: Sticky Navbar -->
+  <nav class="navbar">Profile Card</nav>
+
+  <div class="page">
+
+    <!-- TUGAS 1: Kartu (position: relative, 260px) -->
+    <div class="card">
+
+      <!-- TUGAS 2: Badge (position: absolute) -->
+      <div class="badge">🟢 Online</div>
+
+      <img
+        class="card-cover"
+        src="https://i.ebayimg.com/images/g/q3EAAOSwB1RgSF9H/s-l1200.jpg"
+        alt="Profile Photo"
+      />
+
+      <div class="card-body">
+
+        <div class="name-row">
+          <p class="name">Isabella Swan</p>
+          <div class="verified">
+            <svg width="8" height="8" viewBox="0 0 8 8" fill="none">
+              <path d="M1.5 4L3 5.5L6.5 2.5" stroke="white" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <p class="bio">Student at Forks High School who focuses on simplicity &amp; usability.</p>
+
+        <div class="stats">
+          <div class="stat">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+            524
+          </div>
+          <div class="stat">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+            18
+          </div>
+          <span class="stat-location">Forks, WA</span>
+        </div>
+
+        <div class="actions">
+          <button class="btn-follow">Follow +</button>
+          <button class="btn-msg">Message</button>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- TUGAS 4: Back to Top (position: fixed) -->
+  <button class="back-to-top" onclick="window.scrollTo({top:0, behavior:'smooth'})">↑</button>
+
+</body>
+</html>

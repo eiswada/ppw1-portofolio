@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Animation & Transition</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet"/>
+  <style>
+    /* CSS VARIABLES — palet warna */
+    :root {
+      --color-black: #111;
+      --color-white: #fff;
+      --color-gray-light: #f5f5f5;
+      --color-gray-mid: #e8e8e8;
+      --color-gray-text: #888;
+      --color-gray-muted: #999;
+      --color-accent: #111;
+      --color-border: #e8e8e8;
+      --transition-base: 0.25s ease;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      background: var(--color-white);
+      color: var(--color-black);
+      min-height: 100vh;
+    }
+
+    /* NAVBAR */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 40px;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .logo { font-size: 14px; font-weight: 700; color: var(--color-black); }
+    nav ul { display: flex; gap: 28px; list-style: none; }
+    nav ul a {
+      color: var(--color-black);
+      text-decoration: none;
+      font-size: 13px;
+      padding: 5px 12px;
+      border: 1px solid transparent;
+      transition: border-color var(--transition-base), background var(--transition-base);
+    }
+    nav ul a:hover { border-color: var(--color-black); background: var(--color-gray-light); }
+
+    /* PAGE BODY */
+    .page {
+      padding: 60px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+
+      /* FADE IN saat halaman dibuka */
+      animation: fadeIn 0.8s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* SECTION LABEL */
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--color-gray-text);
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    /* ── TOMBOL ── */
+    .buttons-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+    }
+
+    /* Tombol 1 — warna background berubah */
+    .btn-fill {
+      padding: 10px 24px;
+      background: var(--color-black);
+      color: var(--color-white);
+      border: 1px solid var(--color-black);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      cursor: pointer;
+      transition: background var(--transition-base), color var(--transition-base);
+    }
+    .btn-fill:hover {
+      background: var(--color-white);
+      color: var(--color-black);
+    }
+
+    /* Tombol 2 — transform scale + border */
+    .btn-outline {
+      padding: 10px 24px;
+      background: transparent;
+      color: var(--color-black);
+      border: 1px solid var(--color-black);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      cursor: pointer;
+      transition: transform var(--transition-base), box-shadow var(--transition-base);
+    }
+    .btn-outline:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    }
+
+    /* Tombol 3 — box-shadow glow + letter-spacing */
+    .btn-ghost {
+      padding: 10px 24px;
+      background: var(--color-gray-light);
+      color: var(--color-black);
+      border: 1px solid var(--color-border);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      cursor: pointer;
+      transition: box-shadow var(--transition-base), letter-spacing var(--transition-base), background var(--transition-base);
+    }
+    .btn-ghost:hover {
+      background: var(--color-gray-mid);
+      box-shadow: inset 0 0 0 1px var(--color-black);
+      letter-spacing: 1.5px;
+    }
+
+    /* ─ LOADING SPINNER ─ */
+    .spinner-wrap {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .spinner {
+      width: 36px;
+      height: 36px;
+      border: 2px solid var(--color-border);
+      border-top-color: var(--color-black);
+      border-radius: 50%;
+      animation: spin 0.75s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .spinner-label {
+      font-size: 12px;
+      color: var(--color-gray-text);
+      letter-spacing: 0.3px;
+    }
+
+    /* ─ CARD DEMO ─ */
+    .demo-card {
+      width: 260px;
+      border: 1px solid var(--color-border);
+      overflow: hidden;
+      animation: fadeIn 1.2s ease forwards;
+      opacity: 0;
+      animation-delay: 0.3s;
+    }
+
+    .demo-card-img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+      background: var(--color-gray-light);
+    }
+
+    .demo-card-body {
+      padding: 12px 14px 14px;
+    }
+
+    .demo-card-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--color-black);
+      margin-bottom: 4px;
+    }
+
+    .demo-card-sub {
+      font-size: 11px;
+      color: var(--color-gray-muted);
+    }
+
+    /* FOOTER */
+    footer {
+      display: flex;
+      gap: 40px;
+      padding: 32px 40px;
+      background: var(--color-black);
+      color: var(--color-gray-text);
+      font-size: 12px;
+      border-top: 3px solid var(--color-black); /* direvisi: #000 → var(--color-black) */
+      margin-top: auto;
+    }
+    footer div { flex: 1; }
+    footer h4 {
+      color: var(--color-white);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    footer p { line-height: 2; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <span class="logo">◆ Studio</span>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page">
+
+    <!-- TOMBOL -->
+    <div>
+      <p class="section-label">Buttons — Hover Effects</p>
+      <div class="buttons-row">
+        <button class="btn-fill">Fill Invert</button>
+        <button class="btn-outline">Lift & Shadow</button>
+        <button class="btn-ghost">Expand Tracking</button>
+      </div>
+    </div>
+
+    <!-- LOADING SPINNER -->
+    <div>
+      <p class="section-label">Loading Spinner — @keyframes</p>
+      <div class="spinner-wrap">
+        <div class="spinner"></div>
+        <span class="spinner-label">Loading, please wait...</span>
+      </div>
+    </div>
+
+    <!-- FADE IN CARD -->
+    <div>
+      <p class="section-label">Fade In — opacity animation on load</p>
+      <div class="demo-card">
+        <img
+          class="demo-card-img"
+          src="https://i.ebayimg.com/images/g/q3EAAOSwB1RgSF9H/s-l1200.jpg"
+          alt="Demo"
+        />
+        <div class="demo-card-body">
+          <p class="demo-card-name">Isabella Swan</p>
+          <p class="demo-card-sub">Forks High School · Online</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div><h4>Studio.</h4><p>Simple design for<br>modern problems.</p></div>
+    <div><h4>Links</h4><p>Home<br>About<br>FAQ</p></div>
+    <div><h4>Contact</h4><p>hello@studio.com<br>Jakarta, Indonesia</p></div>
+  </footer>
+
+</body>
+</html>
