@@ -12,10 +12,16 @@ if (isset($_POST['submit'])) {
     $errors        = [];
     $foto_filename = null;
 
-    if (empty($nim))    $errors[] = "NIM tidak boleh kosong";
-    if (empty($nama))   $errors[] = "Nama tidak boleh kosong";
+    if (empty($nim)) {
+    $errors[] = "NIM tidak boleh kosong";
+    } elseif (!is_numeric($nim)) {
+        $errors[] = "NIM hanya boleh berisi angka, tidak boleh mengandung huruf atau simbol";
+    } elseif (!preg_match('/^[0-9]{8,12}$/', $nim)) {
+        $errors[] = "Panjang NIM harus antara 8 sampai 12 digit";
+    }
+    if (empty($nama))    $errors[] = "Nama tidak boleh kosong";
     if (empty($jurusan)) $errors[] = "Jurusan tidak boleh kosong";
-    if (empty($email))  $errors[] = "Email tidak boleh kosong";
+    if (empty($email))   $errors[] = "Email tidak boleh kosong";
     elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) $errors[] = "Format email tidak valid";
 
     $check_nim = mysqli_query($conn, "SELECT nim FROM mahasiswa WHERE nim = '$nim'");

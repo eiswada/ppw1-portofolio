@@ -344,6 +344,10 @@ $result = mysqli_query($conn, "SELECT * FROM mahasiswa $search_query ORDER BY id
                             <td><?php echo htmlspecialchars($row['email']); ?></td>
                             <td><?php echo htmlspecialchars($row['alamat']); ?></td>
                             <td>
+                                <a href="detail.php?id=<?php echo $row['id']; ?>" 
+                                style="background:#17a2b8; color:white; padding:5px 10px; border-radius:4px; text-decoration:none; font-size:13px;">
+                                🔍 Detail
+                                </a>
                                 <a href="edit.php?id=<?php echo $row['id']; ?>" class="btn btn-warning">✏️ Edit</a>
                                 <a href="hapus.php?id=<?php echo $row['id']; ?>" class="btn btn-danger"
                                     onclick="return confirm('Yakin ingin menghapus data <?php echo htmlspecialchars($row['nama']); ?>?')">🗑️ Hapus</a>

@@ -28,6 +28,14 @@ if (isset($_POST['update'])) {
     $errors        = [];
     $foto_filename = $current_foto;
 
+    if (!empty($nim)) {
+    if (!is_numeric($nim)) {
+        $errors[] = "NIM hanya boleh berisi angka, tidak boleh mengandung huruf atau simbol";
+    } elseif (!preg_match('/^[0-9]{8,12}$/', $nim)) {
+        $errors[] = "Panjang NIM harus antara 8 sampai 12 digit";
+    }
+    }
+
     if (empty($nim))    $errors[] = "NIM tidak boleh kosong";
     if (empty($nama))   $errors[] = "Nama tidak boleh kosong";
     if (empty($jurusan)) $errors[] = "Jurusan tidak boleh kosong";
