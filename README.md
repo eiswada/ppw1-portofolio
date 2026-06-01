@@ -1,6 +1,8 @@
 # Portofolio Praktikum Pemrograman Web 1  
 Kumpulan tugas Praktikum Pemrograman Web 1 
-Program Studi TRPL — Semester 2  ---  
+Program Studi TRPL — Semester 2  
+
+---  
 
 ## Tentang Saya  
 | Info  | Detail                | 
@@ -33,12 +35,13 @@ Program Studi TRPL — Semester 2  ---
 | 12  | PHP                    | bab-12-php/                   |
 | 13  | PHP 2                  | bab-13-php-2/                 |
 | 14  | CRUD                   | bab-14-crud/                  |
+
 ---
 
 ## 📸 Screenshot
 
 ![Preview CRUD](bab-13-php_2/todo_app/todo_app.png) 
-![Preview CRUD](bab-14-crud/praktikum_crud.png) 
+![Preview CRUD](bab-14-crud/praktikum_crud/praktikum_crud.png) 
 
 ---
 
@@ -48,4 +51,4 @@ HTML · CSS · JavaScript · PHP · MySQL · Bootstrap
 
 ---
 
-*© 2025 Putrie Araya Iswada*
+*© 2026 Putrie Araya Iswada*
